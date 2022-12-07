@@ -1,0 +1,9 @@
+requests
+boto3
+requests_oauthlib
+fsspec
+selenium
+undetected-chromedriver
+pyvirtualdisplay
+fastapi 
+uvicorn
