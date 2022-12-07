@@ -7,7 +7,7 @@ import undetected_chromedriver.v2 as uc
 import subprocess
 import shutil
 import time
-#from pyvirtualdisplay import Display
+from pyvirtualdisplay import Display
 from selenium import webdriver
 from fastapi import FastAPI
 
@@ -16,8 +16,8 @@ app = FastAPI()
 
 @app.get("/anfrage/")
 async def send_anfrage(id: str, text: int, user: int):
-    #display = Display(visible=False, extra_args=[':25'], size=(2560, 1440), backend="xvfb")
-    #display.start()
+    display = Display(visible=False, extra_args=[':25'], size=(2560, 1440), backend="xvfb")
+    display.start()
     driver = uc.Chrome()
     link = "https://www.immobilienscout24.de/expose/138295962#/basicContact"
     button_id = "button[data-ng-click *= 'submit']"
